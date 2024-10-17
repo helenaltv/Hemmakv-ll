@@ -1,0 +1,80 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fyra kolumner på breda skärmar */
+  gap: 20px; /* Avstånd mellan filmer */
+  justify-items: center; /* Centrera filmerna i rutnätet */
+  margin: 0 auto; /* Centrera hela listan horisontellt */
+  max-width: 1200px; /* Maxbredd för listan */
+  padding: 20px; /* Padding runt listan */
+}
+
+/* Ny stil för att centrera texten när inga filmer hittas */
+.no-movies {
+  grid-column: span 4; /* Spänn över alla kolumner */
+  text-align: center; /* Centrera texten horisontellt */
+  font-size: 1.5rem; /* Justera fontstorleken vid behov */
+  color: black; /* Färg för texten */
+  margin-top: 20px; /* Lite avstånd ovanför texten */
+}
+
+/* Valfria stilar för MovieCard */
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  display: flex; /* Flexbox för att ordna bilden och texten */
+  flex-direction: column; /* Låt kortet ha en kolumnlayout */
+  width: 100%; /* Gör korten responsiva */
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto; /* Se till att bilden är responsiv */
+}
+
+.movie-info {
+  padding: 10px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.movie-info h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Media queries för responsiv design */
+@media (max-width: 900px) {
+  .movie-list {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Tre kolumner på medelstora skärmar */
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr); /* Två kolumner på små skärmar */
+  }
+}
+
+@media (max-width: 400px) {
+  .movie-list {
+    grid-template-columns: 1fr; /* En kolumn på extra små skärmar */
+  }
+
+  .movie-card {
+    width: auto; /* Korten tar upp hela bredden i sin kolumn */
+  }
+}

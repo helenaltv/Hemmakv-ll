@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Säkerställ att box sizing används korrekt */
+}
+
+html,
+body {
+  height: auto; /* Sätt höjden på html och body till 100% */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("../public/6553EC20-2399-4948-9129-43BA2BA16191.jpeg");
+  background-size: cover; /* Gör så att bilden täcker hela ytan */
+  background-position: center; /* Centrera bakgrundsbilden */
+  background-repeat: no-repeat; /* Förhindra upprepning av bakgrundsbilden */
+  color: #ffffff; /* Vit text */
+}
+
+h1,
+h2,
+h3 {
+  color: white; /* Gul färg för rubriker */
+}
+
+h1 {
+  font-family: "Oswald", sans-serif; /* Använd den valda fontfamiljen */
+  font-size: 3rem; /* Öka storleken */
+  text-align: center; /* Centrera texten om du vill */
+  margin: 20px 0; /* Lägg till lite marginal för utrymme */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff4081; /* Rosa bakgrund */
+  gap: 60px; /* Mellanrum mellan länkarna */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-right: 20px; /* Lägg till mellanrum mellan länkarna */
+}
+
+nav a:last-child {
+  margin-right: 0; /* Ta bort sista marginalen för bättre utseende */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

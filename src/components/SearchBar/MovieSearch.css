@@ -1,0 +1,47 @@
+.movie-search {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column; /* Ändra till kolumn för smala skärmar */
+  align-items: center; /* Centrera innehållet */
+  gap: 10px;
+}
+
+/* Flexbox justering för större skärmar */
+@media (min-width: 768px) {
+  .movie-search {
+    flex-direction: row; /* Ändra tillbaka till rad för större skärmar */
+  }
+}
+
+.movie-search input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%; /* Full bredd på mindre skärmar */
+  max-width: 300px; /* Maxbredd för större skärmar */
+}
+
+.movie-search button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full bredd på mindre skärmar */
+  max-width: 150px; /* Maxbredd för knappen */
+}
+
+.movie-search button:hover {
+  background-color: #0056b3;
+}
+
+/* Justeringar för mobila enheter */
+@media (max-width: 768px) {
+  .movie-search input,
+  .movie-search button {
+    width: 100%; /* Gör både input och knapp full bredd */
+  }
+}

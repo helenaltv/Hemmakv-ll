@@ -1,0 +1,40 @@
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling för sökfält och knapp */
+.home input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 80%; /* Gör sökfältet bredare */
+  max-width: 300px; /* Maxbredd på sökfältet */
+}
+
+.home button {
+  padding: 10px;
+}
+
+/* Responsiva justeringar */
+@media (max-width: 768px) {
+  .home {
+    padding: 15px; /* Minska padding på mindre skärmar */
+  }
+
+  .home input {
+    width: 100%; /* Full bredd på små skärmar */
+    margin-right: 0; /* Ta bort marginalen på sidor */
+    margin-bottom: 10px; /* Lägg till lite utrymme under sökfältet */
+  }
+
+  .home button {
+    width: 100%; /* Gör knappen full bredd */
+    padding: 12px; /* Öka padding för större knapp */
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 1.5em; /* Mindre text på mobiler */
+  }
+}

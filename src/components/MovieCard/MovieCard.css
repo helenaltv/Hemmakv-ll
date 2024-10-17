@@ -1,0 +1,48 @@
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px; /* Sätt en konstant bredd för korten */
+  margin: 15px; /* Detta kan tas bort om gap i movie-listen används */
+  transition: transform 0.2s;
+  display: flex; /* Flexbox för att ordna bilden och texten */
+  flex-direction: column; /* Låt kortet ha en kolumnlayout */
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto; /* Se till att bilden är responsiv */
+}
+
+.movie-info {
+  padding: 10px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.movie-info h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Media queries för responsiv design */
+@media (max-width: 600px) {
+  .movie-card {
+    width: calc(50% - 10px); /* Två kort per rad */
+  }
+}
+
+@media (max-width: 400px) {
+  .movie-card {
+    width: 100%; /* En kolumn per rad */
+  }
+}

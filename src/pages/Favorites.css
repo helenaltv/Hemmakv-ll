@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+  color: #ff6347; /* Hemmakvälls rödaktiga färg */
+  font-size: 2em; /* Större text för större skärmar */
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 20px; /* Lägger till lite padding på sidorna */
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #ffc107;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+}
+
+/* Styling för favorite listan */
+.favorite-list {
+  margin: 0 auto; /* Centrera listan */
+  width: 100%; /* Full bredd */
+  max-width: 600px; /* Maxbredd för stora skärmar */
+}
+
+/* Styling för varje favoritfilm-rad */
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px; /* Padding på varje rad */
+}
+
+/* Styling för sopkorgsikonen */
+.trash-icon {
+  color: #ffcc00; /* Gul färg, ändra till white (#fff) för vit färg */
+  cursor: pointer; /* Ändra muspekaren till pekare när den svävar över */
+  transition: color 0.2s; /* För att lägga till en smidig färgändring */
+}
+
+.trash-icon:hover {
+  color: #ff9900; /* Mörkare gul vid hover, justera efter behov */
+}
+
+/* Responsiva justeringar */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em; /* Mindre text på mindre skärmar */
+  }
+
+  .favorite-list {
+    width: 100%; /* Full bredd på små skärmar */
+  }
+
+  .favorite-item {
+    flex-direction: column; /* Visa film och ikon vertikalt */
+    align-items: center; /* Centrera elementen */
+  }
+
+  .trash-icon {
+    margin-top: 5px; /* Avstånd mellan titeln och ikonen */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em; /* Ännu mindre text på mobiler */
+  }
+
+  p {
+    font-size: 1em; /* Mindre text för meddelandet */
+  }
+}

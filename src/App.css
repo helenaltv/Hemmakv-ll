@@ -1,0 +1,14 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #424242;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: #555;
+}
